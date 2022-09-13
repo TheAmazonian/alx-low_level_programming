@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * main - Entry point
+ * main - Prints _putchar
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char *sh = "main";
+	char *sh = "_putchar";
 
 	while (*sh)
 	{
