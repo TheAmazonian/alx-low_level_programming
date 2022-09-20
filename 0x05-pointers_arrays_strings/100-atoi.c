@@ -1,47 +1,43 @@
 #include "main.h"
-#include "2-strlen.c"
 
 /**
  *_atoi - converts string to integer
  *@s: string to convert
- *
  *Return: returns integer value
  */
+
 int _atoi(char *s)
 {
-	int i;
-	int np = 0;
-	int c;
-	int d = 1;
-	int num = 0;
+	int num, len, numcount, mult, x, neg;
 
-	for (i = 0; i < _strlen(s); i++)
+	len = 0;
+	x = 0;
+	numcount = 0;
+	mult = 1;
+	neg = 1;
+	num = 0;
+
+	while (s[len] != '\0')
 	{
-		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
-			break;
-		if (s[i] == '-')
-			np--;
-		if (s[i] == '+')
-			np++;
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[len] >= '0' && s[len] <= '9')
 		{
-			c++;
+			numcount++;
+			if (!(s[len + 1] >= '0' && s[len + 1] <= '9'))
+				break;
 		}
+		len++;
 	}
-	while (c > 0)
+	for (; numcount > 1; numcount--)
+		mult *= 10;
+	for (; x <= len; x++)
 	{
-		num += ((s[i - 1] - '0') * d);
-		i--;
-		c--;
-		d *= 10;
-	}
-	if (np >= 0)
-	{
-		num *= 1;
-	} else
-	{
-		num *= -1;
+		if (s[x] == '-')
+			neg *= -1;
+		else if (s[x] <= '9' && s[x] >= '0')
+		{
+			num += (s[x] - '0') * mult * neg;
+			mult /= 10;
+		}
 	}
 	return (num);
 }
-
