@@ -1,13 +1,5 @@
-#ifndef MAIN
-#define MAIN
-
-/**
- *_putchar - writes the character c to std
- *@c: parameter to compare
- *Return: 1 or 0
- */
-int _putchar(char c);
-void _puts(char *str);
+#ifndef _MAIN_
+#define _MAIN_
 
 /**
  *_putchar - writes the character c to std
@@ -89,5 +81,12 @@ void print_array(int *a, int n);
  *Return: return value
  */
 char *_strcpy(char *dest, char *src);
+
+/**
+ *_atoi - convert char to int
+ *@s: string
+ *Return: returns a value
+ */
+int _atoi(char *s);
 
 #endif
