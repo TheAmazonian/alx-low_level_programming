@@ -27,10 +27,10 @@ int main(void)
 			printf("%d", i);
 		} else
 		{
-			printf(" %d", i);
+			putchar(" %d", i);
 		}
 	}
-	printf("\n");
+	putchar("\n");
 
 	return (0);
 }
