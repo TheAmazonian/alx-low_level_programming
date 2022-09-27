@@ -1,6 +1,8 @@
 #ifndef _MAIN_
 #define _MAIN_
 
+int _putchar(char c);
+
 /**
  *_memset() function - fills the first n bytes of the memory area pointed to by s with the constant byte b
  *@s: memory area
