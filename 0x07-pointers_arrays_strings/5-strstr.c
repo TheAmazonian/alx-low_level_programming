@@ -1,5 +1,4 @@
 #include "main.h"
-#define NULL 0
 
 /**
  * _strstr - locates substring
@@ -30,5 +29,5 @@ char *_strstr(char *haystack, char *needle)
 			}
 
 		}
-		return (NULL);
+		return ('\0');
 }
