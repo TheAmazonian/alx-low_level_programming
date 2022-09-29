@@ -1,5 +1,6 @@
 #include "main.h"
 #define NULL 0
+#include <stdio.h>
 
 /**
  * _strstr - locate and return pointer to first occurence of substring
